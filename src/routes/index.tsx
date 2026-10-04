@@ -16,7 +16,7 @@ import { useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { navigationItems, projects, resumeUrl, skills } from "@/lib/portfolio-data";
+import { certification, navigationItems, projects, resumeUrl, skills } from "@/lib/portfolio-data";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -303,12 +303,12 @@ function Index() {
                 I build products from idea to deployment.
               </h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-muted-foreground">
-                I'm a final-year Information Technology student at I2IT, Pune, passionate about
-                building real-world products. I enjoy working across the stack and exploring AI
-                tools to create useful, reliable applications.
+                I'm an Information Technology student at the International Institute of Information
+                Technology, Pune. I build real-world products across AI, web and e-commerce, working
+                across the stack from interfaces and APIs to databases.
               </p>
             </div>
-            <div className="grid gap-3 sm:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2">
               <InfoCard
                 icon={GraduationCap}
                 label="Education"
@@ -319,6 +319,18 @@ function Index() {
                 icon={BriefcaseBusiness}
                 label="Open to"
                 value="Full-time opportunities and internships"
+              />
+              <InfoCard
+                icon={certification.icon}
+                label="Certification"
+                value={
+                  certification.name +
+                  " - " +
+                  certification.issuer +
+                  " (" +
+                  certification.date +
+                  ")"
+                }
               />
             </div>
           </div>
