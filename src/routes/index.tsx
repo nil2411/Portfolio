@@ -190,13 +190,13 @@ function Index() {
               </p>
             </div>
             <div className="flex flex-wrap content-center gap-3">
-              {skills.map(([name, mark]) => (
+              {skills.map(({ name, icon: Icon }) => (
                 <div
                   key={name}
                   className="flex h-11 items-center gap-2 rounded-full border border-border bg-background px-3 text-sm shadow-hairline"
                 >
-                  <span className="grid size-7 place-items-center rounded-lg bg-secondary font-mono text-[10px] font-bold text-primary">
-                    {mark}
+                  <span className="grid size-7 place-items-center rounded-lg bg-secondary text-primary">
+                    <Icon aria-hidden="true" className="size-4" strokeWidth={2.25} />
                   </span>
                   {name}
                 </div>

@@ -1,4 +1,20 @@
-import { Code2, Package, Sparkles, type LucideIcon } from "lucide-react";
+import {
+  Atom,
+  Braces,
+  Coffee,
+  Code2,
+  Database,
+  FileCode2,
+  GitBranch,
+  Globe2,
+  Leaf,
+  Package,
+  Route,
+  Server,
+  Sparkles,
+  Wind,
+  type LucideIcon,
+} from "lucide-react";
 
 export const navigationItems = [
   { label: "Home", href: "#home" },
@@ -9,18 +25,18 @@ export const navigationItems = [
 ] as const;
 
 export const skills = [
-  ["Java", "JV"],
-  ["Python", "PY"],
-  ["JavaScript", "JS"],
-  ["TypeScript", "TS"],
-  ["React.js", "RE"],
-  ["Node.js", "NO"],
-  ["Express.js", "EX"],
-  ["MySQL", "MY"],
-  ["MongoDB", "MO"],
-  ["Tailwind CSS", "TW"],
-  ["Git", "GT"],
-  ["REST APIs", "API"],
+  { name: "Java", icon: Coffee },
+  { name: "Python", icon: Braces },
+  { name: "JavaScript", icon: FileCode2 },
+  { name: "TypeScript", icon: FileCode2 },
+  { name: "React.js", icon: Atom },
+  { name: "Node.js", icon: Server },
+  { name: "Express.js", icon: Route },
+  { name: "MySQL", icon: Database },
+  { name: "MongoDB", icon: Leaf },
+  { name: "Tailwind CSS", icon: Wind },
+  { name: "Git", icon: GitBranch },
+  { name: "REST APIs", icon: Globe2 },
 ] as const;
 
 export type PortfolioProject = {
